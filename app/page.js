@@ -22,7 +22,7 @@ export default function Home() {
             <Link href="/quienes">Quien somos</Link>
           </li>
           <li>
-            <Link href="./reservas/index.js">Reservas</Link>
+            <Link href="./reservas">Reservas</Link>
           </li>
           <li>
             <Link href="/contacto">Contacto</Link>
