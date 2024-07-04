@@ -11,41 +11,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 
-  const mascotas = [
-    {
-      id: 1,
-      name: "sifon"
-    },
-    {
-      id: 2,
-      name: "toto"
-    },
-    {
-      id: 3,
-      name: "rodo"
-    },
-  ];
 
   return (
     <html lang="en">
       <body className={inter.className}>
-      <nav>
-        <ul>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/quienes-somos">Quien somos</Link>
-          </li>
-          <li>
-            <Link href="/reservas">Reservas</Link>
-          </li>
-          <li>
-            <Link href="/contacto">Contacto</Link>
-          </li>
-          
-        </ul>
-      </nav>
         {children}
       </body>
     </html>

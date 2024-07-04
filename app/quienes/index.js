@@ -1,11 +1,10 @@
 import Image from "next/image";
-import styles from "./page.module.css";
+import styles from "../page.module.css";
 import Head from "next/head";
 import Link from 'next/link';
+import Titulo from '../../app/components/Titulo/Titulo';
 
-import Titulo from './components/Titulo/Titulo';
-
-export default function Home() {
+export default function quienes() {
   return (
     <>
     <Head>
@@ -34,3 +33,6 @@ export default function Home() {
     </>
   );
 }
+
+
+
