@@ -6,27 +6,28 @@ import Link from 'next/link';
 export default function contacto() {
   return (
     <>
+    <nav className={styles.nav}>
+      <ul className={styles.ul}>
+        <li className={styles.li}>
+          <Link href="/" className={styles.link}>Home</Link>
+        </li>
+        <li className={styles.li}>
+          <Link href="/quienes" className={styles.link}>Quiénes Somos</Link>
+        </li>
+        <li className={styles.li}>
+          <Link href="/reservas" className={styles.link}>Reservas</Link>
+        </li>
+        <li className={styles.li}>
+          <Link href="/contacto" className={styles.link}>Contacto</Link>
+        </li>
+      </ul>
+    </nav>
     <Head>
     </Head>
+    
     <main className={styles.main}>
       
-      <nav>
-        <ul>
-          <li>
-            <Link href="../page.js">Home</Link>
-          </li>
-          <li>
-            <Link href="../quienes">Quienes somos</Link>
-          </li>
-          <li>
-            <Link href="../reservas">Reservas</Link>
-          </li>
-          <li>
-            <Link href="/">Contacto</Link>
-          </li>
-          
-        </ul>
-      </nav>
+    
 
       <div className={styles.card}>
       <div className={styles.cardInner}>
