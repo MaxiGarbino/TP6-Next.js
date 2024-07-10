@@ -7,6 +7,16 @@
   min-height: 100vh;
 }
 
+.inde{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+border: 2px solid #fa64cd;
+flex-wrap: nowrap;
+width: 800px;
+padding: 20px;
+margin: 30px;
+}
 .description {
   display: inherit;
   justify-content: inherit;
@@ -256,9 +266,10 @@
 .link {
   color: rgb(0, 0, 0);
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: bold;
   transition: color 0.3s ease, border-bottom 0.3s ease;
+  
 }
 
 .link:hover {

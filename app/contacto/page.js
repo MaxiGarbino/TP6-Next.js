@@ -1,11 +1,13 @@
 import Image from "next/image";
-import styles from "../page.module.css";
+import styles from "./index.module.css";
 import Head from "next/head";
 import Link from 'next/link';
 
 export default function contacto() {
   return (
     <>
+    
+   
     <nav className={styles.nav}>
       <ul className={styles.ul}>
         <li className={styles.li}>
@@ -22,37 +24,32 @@ export default function contacto() {
         </li>
       </ul>
     </nav>
-    <Head>
-    </Head>
     
-    <main className={styles.main}>
-      
     
+    
+    
+    <main className={styles.principal}>
+                    <div className={styles.contenedorFormulario}>
+                        <h2>Formulario de Contacto</h2>
+                        <form className={styles.formulario}>
+                            <label className={styles.etiqueta} htmlFor="name">Nombre:</label>
+                            <input className={styles.entrada} type="text" id="name" name="name" required />
 
-      <div className={styles.card}>
-      <div className={styles.cardInner}>
-        <div className={styles.cardFront}>
-          <h2 className={styles.cardTitle}>Formulario de Contacto</h2>
-          <form className={styles.form}>
-            <label className={styles.label} htmlFor="name">Nombre:</label>
-            <input className={styles.input} type="text" id="name" name="name" required />
+                            <label className={styles.etiqueta} htmlFor="email">Correo Electrónico:</label>
+                            <input className={styles.entrada} type="email" id="email" name="email" required />
 
-            <label className={styles.label} htmlFor="email">Correo Electrónico:</label>
-            <input className={styles.input} type="email" id="email" name="email" required />
+                            <label className={styles.etiqueta} htmlFor="message">Mensaje:</label>
+                            <textarea className={styles.textarea} id="message" name="message" required></textarea>
 
-            <label className={styles.label} htmlFor="message">Mensaje:</label>
-            <textarea className={styles.textarea} id="message" name="message" required></textarea>
-
-            <button className={styles.button} type="submit">Enviar</button>
-          </form>
-        </div>
-        <div className={styles.cardBack}>
-          <h2 className={styles.cardTitle}>¡Gracias!</h2>
-          <p>Nos pondremos en contacto contigo pronto.</p>
-        </div>
-      </div>
-    </div>
-    </main>
+                            <button className={styles.boton} type="submit">Enviar</button>
+                        </form>
+                    </div>
+                   
+                
+          
+        </main>
+        
+        
     </>
     
   );
