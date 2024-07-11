@@ -10,32 +10,40 @@ import Link from 'next/link';
 
 export default function Reservas() {
   
-  const [citas,setCitas] = useState([
+  const initialCitas = [
     {
       Id: 1,
       Mascota: "Nina",
-      Dueño:"Martin",
-      Fecha:"2021-08-05",
-      Hora:"8:20",
-      Sintomas:"Le duele la pierna"
+      Dueño: "Martin",
+      Fecha: "2021-08-05",
+      Hora: "8:20",
+      Sintomas: "Le duele la pierna",
     },
     {
       Id: 2,
       Mascota: "Sifon",
-      Dueño:"Flecha",
-      Fecha:"2023-08-05",
-      Hora:"09:24",
-      Sintomas:"Duerme mucho"
+      Dueño: "Flecha",
+      Fecha: "2023-08-05",
+      Hora: "09:24",
+      Sintomas: "Duerme mucho",
     },
     {
       Id: 3,
       Mascota: "Floki",
-      Dueño:"Ari",
-      Fecha:"2023-08-05",
-      Hora:"16:15",
-      Sintomas:"No esta comiendo"
-    }
-  ]);
+      Dueño: "Ari",
+      Fecha: "2023-08-05",
+      Hora: "16:15",
+      Sintomas: "No está comiendo",
+    },
+  ];
+    const [citas, setCitas] = useState(() => {
+      const citasLocalStorage = localStorage.getItem("citas");
+      return citasLocalStorage ? JSON.parse(citasLocalStorage) : initialCitas;
+    });
+  
+    useEffect(() => {
+      localStorage.setItem("citas", JSON.stringify(citas));
+    }, [citas]);
 
   return (
     <>
